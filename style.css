@@ -38,6 +38,64 @@ p {
     font-size: 1.17rem;
 }
 
+label {
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+input {
+    display: block;
+    width: 80%;
+    height: 26px;
+    margin-top: 3px;
+    border: 1px solid var(--light-gray);
+    border-radius: .25rem;
+    padding-left: .5rem;
+}
+
+input:focus {
+    border-color: #000;
+}
+
+input:valid {
+    border-color: var(--success-green);
+}
+
+input:invalid {
+    border-color: var(--error-red);
+}
+
+button[type="submit"] {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    width: 100%;
+    background-color: var(--khaki-green);
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #fff;
+    margin-bottom: var(--space-1);
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: opacity .2s;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    cursor: pointer;
+    opacity: .9;
+}
+
+.form-group {
+    width: 48%;
+}
+
+.khaki-green {
+    color: var(--khaki-green);
+}
+
 .italic {
     font-style: italic;
 }
@@ -70,65 +128,7 @@ p {
     flex-wrap: wrap;
 }
 
-.form-group {
-    width: 48%;
-}
-
-label {
-    color: var(--dark-gray);
-    text-transform: uppercase;
-    font-size: .75rem;
-    font-weight: 500;
-    letter-spacing: 3px;
-}
-
-input {
-    display: block;
-    width: 80%;
-    height: 26px;
-    margin-top: 3px;
-    border: 1px solid var(--light-gray);
-    border-radius: .25rem;
-    padding-left: .5rem;
-}
-
-input:focus {
-    border-color: #000;
-}
-
-input:valid {
-    border-color: var(--success-green);
-}
-
-input:invalid {
-    border-color: var(--error-red);
-}
-
 .content-body-foot {
     position: absolute;
-    bottom: 30%;
-}
-
-button[type="submit"] {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    width: 100%;
-    background-color: var(--khaki-green);
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    color: #fff;
-    margin-bottom: var(--space-1);
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: opacity .2s;
-}
-
-button[type="submit"]:hover,
-button[type="submit"]:focus {
-    cursor: pointer;
-    opacity: .9;
-}
-
-.khaki-green {
-    color: var(--khaki-green);
+    bottom: calc(100vh - 90%);
 }
