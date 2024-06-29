@@ -1,6 +1,134 @@
 :root {
     --khaki-green: #596D48;
     --light-gray: #E5E7EB;
+    --dark-gray: #4E4E4E;
     --error-red: #EF4444;
     --success-green: #22C55E;
+
+    --space-1: 1rem;
+    --space-3: 3rem;
+    --space-4: 4rem;
+    --space-6: 6rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--light-gray);
+    font-family: 'Times NeW Roman', Courier, monospace;
+}
+
+main {
+    display: flex;
+    overflow: hidden;
+}
+
+h3 {
+    font-size: 1.35rem;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 1.17rem;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.image img{
+    max-height: 100vh;
+    height: 100%;
+    width: 50vw;
+    object-fit: cover;
+}
+
+.content-header {
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-3);
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+}
+
+.content-body {
+    background-color: #fff;
+    padding: var(--space-1) var(--space-4);
+}
+
+.content-body > form {
+    padding-top: var(--space-1);
+    padding-bottom: var(--space-1);
+    max-width: 80%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    width: 48%;
+}
+
+label {
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+input {
+    display: block;
+    width: 80%;
+    height: 26px;
+    margin-top: 3px;
+    border: 1px solid var(--light-gray);
+    border-radius: .25rem;
+    padding-left: .5rem;
+}
+
+input:focus {
+    border-color: #000;
+}
+
+input:valid {
+    border-color: var(--success-green);
+}
+
+input:invalid {
+    border-color: var(--error-red);
+}
+
+.content-body-foot {
+    position: absolute;
+    bottom: 30%;
+}
+
+button[type="submit"] {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    width: 100%;
+    background-color: var(--khaki-green);
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #fff;
+    margin-bottom: var(--space-1);
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: opacity .2s;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+    cursor: pointer;
+    opacity: .9;
+}
+
+.khaki-green {
+    color: var(--khaki-green);
 }
